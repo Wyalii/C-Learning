@@ -16,5 +16,19 @@ int main()
     //     printf("%d\n", arr[i]);
     // }
 
+    // int arr[2][2] = {{10, 20},
+    //                  {30, 40}};
+    // int arr[2][2] = {10, 20, 30, 40};
+    // printf("print 2D array elements:\n ");
+    // for (int i = 0; i < 2; i++)
+    // {
+    //     for (int j = 0; j < 2; j++)
+    //     {
+    //         printf("i: %d, j: %d ,element: %d\n", i, j, arr[i][j]);
+    //     }
+    // }
+
+    // printf("element: %d\n", arr[1][1]);
+    // printf("element: %d\n", *(*(arr + 1)) + 1);
     return 0;
 }
