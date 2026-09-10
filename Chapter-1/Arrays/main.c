@@ -30,5 +30,27 @@ int main()
 
     // printf("element: %d\n", arr[1][1]);
     // printf("element: %d\n", *(*(arr + 1)) + 1);
+
+    int arr[2][3][2] = {
+        {{1, 1},
+         {2, 2},
+         {3, 3}},
+        {{4, 4},
+         {5, 5},
+         {6, 6}}};
+
+    for (int i = 0; i < 2; i++)
+    {
+        printf("index position of 3D array i: %d\n", i);
+        for (int j = 0; j < 3; j++)
+        {
+            printf("index position of 2D array j: %d\n", j);
+            for (int l = 0; l < 2; l++)
+            {
+                printf("index position of 1D array l: %d\n", l);
+                printf("element is: %d\n", arr[i][j][l]);
+                        }
+        }
+    }
     return 0;
 }
