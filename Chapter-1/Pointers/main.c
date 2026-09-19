@@ -77,4 +77,8 @@ int main()
 
     // pointers to poitners are usefule when our program needs to change the adress of a pointer it points to.
     // and we might use another pointer for that.
+
+    // POINTER ARITHMETICS IN C.
+
+    // FORMULA: new adress = current address +or- (Number x size of data type)
 }
