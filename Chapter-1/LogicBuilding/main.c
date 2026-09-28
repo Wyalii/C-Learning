@@ -163,8 +163,69 @@ bool doOverlap(Point l1, Point r1, Point l2, Point r2)
     }
     return true;
 }
+int factorial(int n)
+{
+    int result = 1;
+    for (int i = n; i >= 1; i--)
+    {
+        result = result * i;
+    }
+    return result;
+}
+
+int pairCubeCount(int n)
+{
+    int result = 0;
+    // CONDITION  a^3 + b^3 = n
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 2; j < n; j++)
+        {
+            result = (i * i * i) + (j * j * j);
+            if (result == n)
+            {
+                return 2;
+            }
+        }
+    }
+    return 0;
+}
+int findGCF(int a, int b)
+{
+    // take number
+    // find the smallest number it can be divided by
+    // divide number by smallest divisor
+    // repeat until it reaches lower
+
+    int higher;
+    int lower;
+    int gcf;
+    if (a > b)
+    {
+        higher = a;
+        lower = b;
+    }
+    if (b > a)
+    {
+        higher = b;
+        lower = a;
+    }
+    for (int i = 2; i <= lower; i++)
+    {
+
+        if (higher % i == 0 && lower % i == 0)
+        {
+            gcf = i;
+        }
+    }
+    return gcf;
+}
 int main()
 {
+
+    printf("%d\n", findGCF(20, 28));
+    // printf("%d\n", pairCubeCount(28));
+    // printf("%d\n", factorial(1));
     // printf("%d\n", reverseInteger1(123));
     // printf("%d\n", reverseInteger2(123));
     // if (primeNumber(17))
@@ -176,16 +237,16 @@ int main()
     //     printf("false\n");
     // }
 
-    Point pointL1 = {0, 10}; // Rect 1: x ∈ [0,10], y ∈ [0,10]
-    Point pointR1 = {10, 0};
-    Point pointL2 = {50, 5}; // Rect 2: x ∈ [50,60], y ∈ [0,5]
-    Point pointR2 = {60, 0};
-    if (doOverlap(pointL1, pointR1, pointL2, pointR2))
-    {
-        printf("True\n");
-    }
-    else
-    {
-        printf("False\n");
-    }
+    // Point pointL1 = {0, 10};
+    // Point pointR1 = {10, 0};
+    // Point pointL2 = {50, 5};
+    // Point pointR2 = {60, 0};
+    // if (doOverlap(pointL1, pointR1, pointL2, pointR2))
+    // {
+    //     printf("True\n");
+    // }
+    // else
+    // {
+    //     printf("False\n");
+    // }
 }
